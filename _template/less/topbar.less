@@ -1,0 +1,46 @@
+
+.topbar {
+
+}
+
+
+// NAVIGATION
+// ----------
+
+.topbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin-bottom: 0;
+}
+.topbar .nav > li {
+  float: left;
+}
+
+// Links
+.topbar .nav > li > a {
+  float: none;
+  // Vertically center the text given @topbarHeight
+  padding: ((@topbarHeight - @baseLineHeight) / 2) 15px ((@topbarHeight - @baseLineHeight) / 2) 0px;
+  color: @navbarLinkColor;
+  text-decoration: none;
+}
+
+// Hover/focus
+.topbar .nav > li > a:focus,
+.topbar .nav > li > a:hover {
+  background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover/:focus from .active
+  color: @navbarLinkColorHover;
+  text-decoration: none;
+}
+
+// Active nav items
+.topbar .nav > .active > a,
+.topbar .nav > .active > a:hover,
+.topbar .nav > .active > a:focus {
+  color: @navbarLinkColorActive;
+  text-decoration: underline;
+}
+
+
