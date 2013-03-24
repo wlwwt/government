@@ -24,7 +24,7 @@ page {
 			key.override.field = backend_layout
 
 			default = TEXT
-			default.value = EXT:theme_government/Resources/Private/Templates/modern_3col.html
+			default.value = EXT:theme_government/Resources/Private/Templates/basic_1col.html
 			2 = TEXT
 			2.value = EXT:theme_government/Resources/Private/Templates/modern_2col.html
 		}
@@ -37,22 +37,21 @@ page {
 
 	# CSS files to be included
 	includeCSS {
-		file1 = EXT:theme_government/Resources/Public/Template/css/bootstrap.css
+		file1 = EXT:theme_government/Resources/Public/Template/css/government.min.css
 		file1.media = screen,print
-		file2 = EXT:theme_government/Resources/Public/Template/css/bootstrap-responsive.css
+		file2 = EXT:theme_government/Resources/Public/Template/css/government-responsive.min.css
 		file2.media = screen,print
-		file3 = EXT:theme_government/Resources/Public/Template/css/app.css
-		file3.media = screen,print
 	}
 
 	# JS files to be included
 	includeJSFooter {
-	#	file2 = EXT:theme_government/Resources/Public/Template/js/bootstrap.js
-		file3 = EXT:theme_government/Resources/Public/Template/js/bootstrap-dropdown.js
+		file1 = EXT:theme_government/Resources/Public/Template/js/jquery.js
+		file2 = EXT:theme_government/Resources/Public/Template/js/bootstrap.min.js
+		file3 = EXT:theme_government/Resources/Public/Template/js/government.js
 	}
 
 	includeJSFooterlibs {
-	jQuery = EXT:theme_government/Resources/Public/Template/js/jquery.js
+	#jQuery = EXT:theme_government/Resources/Public/Template/js/jquery.js
 	}
 
 

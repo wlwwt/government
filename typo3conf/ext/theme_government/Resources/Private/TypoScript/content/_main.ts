@@ -12,4 +12,4 @@
 # **********************************************************
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/TypoScript/content/tt_content.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/TypoScript/content/lightbox.ts">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/TypoScript/content/lightbox.ts">

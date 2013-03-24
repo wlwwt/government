@@ -9,7 +9,7 @@
 # **********************************************************
 # Constants
 # **********************************************************
-lib.constants.layouts.pid = 20
+lib.constants.layouts.pid = 9
 lib.constants.permissions.groupid = 1
 
 

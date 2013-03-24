@@ -11,8 +11,8 @@
 # Debug stuff
 # **********************************************************
 
-page.headerData.5 = COA
-page.headerData.5 {
+page.headerData.50 = COA
+page.headerData.50 {
 	5 = TEXT
 	5.value (
 		<!--

@@ -1,0 +1,53 @@
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="brand" href="#">Stadt Musterstadt</a>
+			<div class="nav-collapse collapse">
+				
+				<f:cObject typoscriptObjectPath="lib.navigation">
+				<ul class="nav">
+					<li class="">
+						<a href="">Rathaus</a>
+					</li>
+					<li class="active">
+					  <a href="">Veranstaltungen</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Wirtschaft <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						  <li><a href="#">Action</a></li>
+						  <li><a href="#">Another action</a></li>
+						  <li><a href="#">Something else here</a></li>
+						  <li class="divider"></li>
+						  <li class="nav-header">Nav header</li>
+						  <li><a href="#">Separated link</a></li>
+						  <li><a href="#">One more separated link</a></li>
+						</ul>
+					  </li>
+					<li class="">
+					  <a href="">Verkehr</a>
+					</li>
+				</ul>	
+				</f:cObject>
+				
+				
+				<f:cObject typoscriptObjectPath="lib.navigation.right">
+				<ul class="nav pull-right">
+					<li class="">
+					  <a href="">Behördenfinder</a>
+					</li>
+					<li class="">
+					  <a href="#">Leerstand</a>
+					</li>
+				</ul>
+				</f:cObject>  
+		
+			</div>
+		</div>
+	</div>
+</div>

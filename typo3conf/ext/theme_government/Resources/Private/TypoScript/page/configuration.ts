@@ -12,8 +12,8 @@
 # **********************************************************
 
 page {
-	meta.viewport = width=100%, minimum-scale=1.0, maximum-scale=1.0
-	shortcutIcon = EXT:theme_government/Resources/Public/Icons/favicon.ico
+	meta.viewport = width=device-width, initial-scale=1.0
+	shortcutIcon = EXT:theme_government/Resources/Public/Template/ico/favicon.ico
 }
 
 config {
@@ -44,12 +44,12 @@ config {
 
 	# Spam
 	spamProtectEmailAddresses = -2
-	spamProtectEmailAddresses_atSubst = <script type="text/javascript">obscureMid();</script>
-	spamProtectEmailAddresses_lastDotSubst = <script type="text/javascript">obscureEnd();</script>
+	spamProtectEmailAddresses_atSubst = (at)
+	spamProtectEmailAddresses_lastDotSubst = (.)
 
 	# indexed Search
-	index_enable = 1
-	index_externals = 1
+	#index_enable = 1
+	#index_externals = 1
 
 	# check for valid L-params
 	linkVars = L(0-50)
@@ -67,16 +67,10 @@ config {
 	#stat_mysql = 1
 	#stat_typeNumList = 0
 
-	headerComment (
-######################################################################
-#                                   __                               #
-#                .--------.-----.--|  |.-----.----.-----.            #
-#                |        |  _  |  _  ||  -__|   _|     |            #
-#                |__|__|__|_____|_____||_____|__| |__|__|            #
-#                                                                    #
-#                   modern TYPO3 theme by Georg Ringer               #
-######################################################################
-	)
+        headerComment (
+Realisation: wlwwt - TYPO3 aus Passau
+Kontakt: http://www.wlwwt.de / Tel. +49 170 29 18 949 / wolfgang.freund@wlwwt.de
+)
 
 
 }

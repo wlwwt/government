@@ -1,78 +1,14 @@
-# ******************************************************************************
-#	(c) 2012 Georg Ringer <typo3@ringerge.org>
-#
-#	You can redistribute it and/or modify it under the terms of the
-#	GNU General Public License as published by the Free Software Foundation;
-#	either version 2 of the License, or (at your option) any later version.
-# ******************************************************************************
-
-# **********************************************************
-# Library for TypoScript about navigations.
-# Content:
-#	* Service navigation (top)
-#	* Breadcrumb
-#	* Sidebar
-#	* Language switch
-#	* Footer menu (left & right)
-# **********************************************************
-
 #-------------------------------------------------------------------------------
-#	NAVIGATION: Service navigation TOP
+#	NAVIGATION: Navigation top right
 #-------------------------------------------------------------------------------
-lib.navigation.service-top = COA
-lib.navigation.service-top {
-	stdWrap.wrap = <ul class="nav nav-service">|</ul>
+lib.navigation.right = COA
+lib.navigation.right {
+	stdWrap.wrap = <ul class="nav pull-right">|</ul>
 
 	10 = HMENU
 	10 {
-		special = directory
-		special.value = {$plugin.theme_configuration.navigation_service}
-
-		1 = TMENU
-		1 {
-			noBlur = 1
-
-			NO {
-				wrapItemAndSub = <li>|</li>
-				ATagTitle.field = subtitle // title
-				stdWrap.htmlSpecialChars = 1
-			}
-		}
-	}
-}
-
-lib.navigation.service-top-right = COA
-lib.navigation.service-top-right {
-	10 = HMENU
-	10 {
-		special = directory
-		special.value = {$plugin.theme_configuration.navigation_service-right}
-
-		1 = TMENU
-		1 {
-			noBlur = 1
-
-			NO {
-				wrapItemAndSub = <li>|</li>
-				ATagTitle.field = subtitle // title
-				stdWrap.htmlSpecialChars = 1
-			}
-		}
-	}
-
-}
-
-#-------------------------------------------------------------------------------
-#	NAVIGATION: Breadcrumb
-#-------------------------------------------------------------------------------
-lib.navigation.breadcrumb = COA
-lib.navigation.breadcrumb {
-	stdWrap.wrap = <ul class="breadcrumb">|</ul>
-
-	10 = HMENU
-	10 {
-		special = rootline
-		#special.range =  1
+		special = list
+		special.value = {$plugin.theme_configuration.navigation.right}
 
 		1 = TMENU
 		1 {
@@ -88,6 +24,120 @@ lib.navigation.breadcrumb {
 			CUR <.NO
 			CUR {
 				wrapItemAndSub = <li class="active">|</li>
+				doNotLinkIt = 0
+			}
+		}
+	}
+}
+
+#-------------------------------------------------------------------------------
+#	NAVIGATION: Main
+#-------------------------------------------------------------------------------
+lib.navigation = COA
+lib.navigation {
+	stdWrap.wrap = <ul class="nav">|</ul>
+
+	10 = HMENU
+	10 {
+		1 = TMENU
+		1 {
+			noBlur = 1
+			expAll = 1
+
+			NO = 1
+			NO {
+				wrapItemAndSub = <li>|</li>
+				ATagTitle.field = subtitle // title
+				stdWrap.htmlSpecialChars = 1
+			}
+				
+			ACT < .NO
+			ACT.wrapItemAndSub = <li class="active">|</li>
+
+			CUR < .ACT
+			
+#			IFSUB = 1
+#			IFSUB {
+#				wrapItemAndSub = <li class="dropdown">| </li>
+#				stdWrap.wrap = |&nbsp;<b class="caret"></b>
+#				ATagParams = class="dropdown-toggle" data-toggle="dropdown"
+#			}
+#
+#			ACTIFSUB < .IFSUB
+#			ACTIFSUB {
+#				wrapItemAndSub = <li class="dropdown active">|</li>
+#			}
+#			
+#			CURIFSUB < .ACTIFSUB
+#
+#			SPC = 1
+#			SPC {
+#				wrapItemAndSub = <li class="divider-vertical">|</li>
+#				doNotShowLink = 1
+#			}
+		}
+
+#		2 < .1 
+#		2 {
+#			wrap = <ul class="dropdown-menu">|</ul>
+#
+#			IFSUB >
+#			IFSUB = 1
+#			IFSUB {
+#				wrapItemAndSub = <li class="dropdown-submenu">|</li>
+#				ATagParams = tabindex="-1"
+#			}
+#
+#			ACTIFSUB >
+#			ACTIFSUB < .IFSUB
+#			ACTIFSUB.wrapItemAndSub = <li class="dropdown-submenu active">|</li>
+#
+#			CURIFSUB >
+#			CURIFSUB < .ACTIFSUB
+#
+#			SPC >
+#			SPC = 1
+#			SPC {
+#				wrapItemAndSub = <li class="divider"></li><li class="nav-header">|</li>
+#			}
+#
+#		}
+#		3 < .2
+#		3 {
+#			IFSUB >
+#			ACTIFSUB >
+#			CURIFSUB >
+#		}
+
+	}
+}
+
+#-------------------------------------------------------------------------------
+#	NAVIGATION: Breadcrumb
+#-------------------------------------------------------------------------------
+lib.navigation.breadcrumb = COA
+lib.navigation.breadcrumb {
+	stdWrap.wrap = <ul class="breadcrumb">|</ul>
+
+	10 = HMENU
+	10 {
+		special = rootline
+		special.range = 0|-1
+
+		1 = TMENU
+		1 {
+			//noBlur = 1
+
+			NO = 1
+			NO {
+				linkWrap = <li>|<span class="divider">/</span></li>
+				ATagTitle.field = subtitle // title
+				stdWrap.htmlSpecialChars = 1
+			}
+
+			CUR = 1
+			CUR {
+				linkWrap = <li class="active">|</span>
 				doNotLinkIt = 1
 			}
 		}
@@ -115,50 +165,7 @@ lib.navigation.breadcrumb {
 }
 
 
-#-------------------------------------------------------------------------------
-#	NAVIGATION: Sidebar
-#-------------------------------------------------------------------------------
-lib.navigation.sidebar = COA
-lib.navigation.sidebar {
-	stdWrap.wrap = <ul class="nav-sidebar">|</ul>
 
-	10 = HMENU
-	10 {
-		1 = TMENU
-		1 {
-			noBlur = 1
-
-			NO = 1
-			NO {
-					wrapItemAndSub = <li>|</li>
-					ATagTitle.field = subtitle // title
-					stdWrap.htmlSpecialChars = 1
-			}
-
-			ACT <.NO
-			ACT.wrapItemAndSub = <li class="active">|</li>
-			ACT.ATagParams = class="active"
-			ACT.ATagBeforeWrap = 1
-
-			CUR <.ACT
-			CUR.ATagParams = class="selected"
-
-			IFSUB <.NO
-			IFSUB.wrapItemAndSub = <li class="hassub">|</li>
-
-			ACTIFSUB <.ACT
-			ACTIFSUB.wrapItemAndSub = <li class="activesub">|</li>
-
-			SPC <.NO
-			SPC.wrapItemAndSub = <li class="nav-header">|</li>
-		}
-
-		2 <.1
-		2.wrap = <ul>|</ul>
-
-		3 <.2
-	}
-}
 
 #-------------------------------------------------------------------------------
 #	NAVIGATION: Language menu
@@ -262,4 +269,3 @@ lib.navigation.footer-right {
 		}
 	}
 }
-

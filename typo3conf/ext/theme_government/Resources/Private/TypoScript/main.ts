@@ -18,7 +18,9 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/TypoScript/page/page.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/TypoScript/page/configuration.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/TypoScript/page/configuration_language.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/TypoScript/page/header.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/TypoScript/page/seo.ts">
+
 
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/TypoScript/page/debug.ts">
