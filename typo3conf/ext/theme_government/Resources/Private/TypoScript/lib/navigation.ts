@@ -164,7 +164,88 @@ lib.navigation.breadcrumb {
 	}
 }
 
+#-------------------------------------------------------------------------------
+#	NAVIGATION: Subnavigation
+#-------------------------------------------------------------------------------
+lib.navigation.subnavigation = COA
+lib.navigation.subnavigation {
+	stdWrap.wrap = <ul class="nav nav-list bs-docs-sidenav">|</ul>
 
+	10 = HMENU
+	10 {
+		entryLevel = 1
+		1 = TMENU
+		1 {
+			noBlur = 1
+			expAll = 1
+
+			NO = 1
+			NO {
+				wrapItemAndSub = <li>|</li>
+				ATagTitle.field = subtitle // title
+				stdWrap.htmlSpecialChars = 1
+			}
+				
+			ACT < .NO
+			ACT.wrapItemAndSub = <li class="active">|</li>
+
+			CUR < .ACT
+			
+#			IFSUB = 1
+#			IFSUB {
+#				wrapItemAndSub = <li class="dropdown">| </li>
+#				stdWrap.wrap = |&nbsp;<b class="caret"></b>
+#				ATagParams = class="dropdown-toggle" data-toggle="dropdown"
+#			}
+#
+#			ACTIFSUB < .IFSUB
+#			ACTIFSUB {
+#				wrapItemAndSub = <li class="dropdown active">|</li>
+#			}
+#			
+#			CURIFSUB < .ACTIFSUB
+#
+#			SPC = 1
+#			SPC {
+#				wrapItemAndSub = <li class="divider-vertical">|</li>
+#				doNotShowLink = 1
+#			}
+		}
+
+#		2 < .1 
+#		2 {
+#			wrap = <ul class="dropdown-menu">|</ul>
+#
+#			IFSUB >
+#			IFSUB = 1
+#			IFSUB {
+#				wrapItemAndSub = <li class="dropdown-submenu">|</li>
+#				ATagParams = tabindex="-1"
+#			}
+#
+#			ACTIFSUB >
+#			ACTIFSUB < .IFSUB
+#			ACTIFSUB.wrapItemAndSub = <li class="dropdown-submenu active">|</li>
+#
+#			CURIFSUB >
+#			CURIFSUB < .ACTIFSUB
+#
+#			SPC >
+#			SPC = 1
+#			SPC {
+#				wrapItemAndSub = <li class="divider"></li><li class="nav-header">|</li>
+#			}
+#
+#		}
+#		3 < .2
+#		3 {
+#			IFSUB >
+#			ACTIFSUB >
+#			CURIFSUB >
+#		}
+
+	}
+}
 
 
 #-------------------------------------------------------------------------------

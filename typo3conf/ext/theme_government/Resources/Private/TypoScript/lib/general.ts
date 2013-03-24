@@ -5,10 +5,22 @@
 lib.general.header.logo = COA
 lib.general.header.logo {
 	10 = TEXT
-	10.value = <img src="{$plugin.theme_configuration.general.header.logo.image}" />
+	10.value = <img src="{$plugin.theme_configuration.general.header.logo.image}" alt="{$plugin.theme_configuration.general.header.name}" title="{$plugin.theme_configuration.general.header.name}" />
 	10.typolink {
 		parameter = {$plugin.theme_configuration.general.header.logo.link}
-		wrap = |
+	}
+}
+
+#-------------------------------------------------------------------------------
+#	GENERAL: Header Navigation Pagename
+#-------------------------------------------------------------------------------
+lib.general.header.name = COA
+lib.general.header.name {
+	10 = TEXT
+	10.value = {$plugin.theme_configuration.general.header.name}
+	10.typolink {
+		parameter = {$plugin.theme_configuration.general.header.logo.link}
+		ATagParams = class=brand
 	}
 }
 
