@@ -42,8 +42,8 @@ TCEFORM.pages {
 # TCEFORM.tt_content.colPos.keepItems = 1,0,2
 
 # Set the default label and flag
-mod.SHARED.defaultLanguageLabel = English
-mod.SHARED.defaultLanguageFlag = gb.gif
+mod.SHARED.defaultLanguageLabel = Deutsch
+mod.SHARED.defaultLanguageFlag = de.gif
 
 # Show the content element wizard with tabs (for consistency)
 mod.wizards.newContentElement.renderMode = tabs
@@ -63,7 +63,7 @@ TCEFORM.tt_content {
 
 	# Erzeuge bei Elemente Einträge im Layoutdropdown für DIVs
 	layout.altLabels {
-		1 = Box
+		1 = Section
 		2 = Box News
 		3 = Box Download
 	}

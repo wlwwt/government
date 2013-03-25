@@ -24,15 +24,20 @@ lib.general.header.name {
 	}
 }
 
-lib.copyright_information = COA
-lib.copyright_information {
+#-------------------------------------------------------------------------------
+#	GENERAL: Footer address
+#-------------------------------------------------------------------------------
+lib.general.footer.address = COA
+lib.general.footer.address {
+	wrap = <p>|</p>
 	10 = TEXT
 	10 {
-		data = date:U
-		strftime = %Y
-		noTrimWrap = || {LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:copyright}|
-		noTrimWrap.insertData = 1
-		typolink.parameter = {$plugin.theme_configuration.general.copyright_information.link}
+		value = {$plugin.theme_configuration.general.footer.address}&nbsp;
+	}
+	50 = TEXT
+	50 {
+		value = {$plugin.theme_configuration.general.footer.email}
+		typolink.parameter = {$plugin.theme_configuration.general.footer.email}
 	}
 }
 

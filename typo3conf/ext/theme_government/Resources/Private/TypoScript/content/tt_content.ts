@@ -14,7 +14,7 @@
 tt_content {
 
 	# Every content element is wrapped inside a div
-	stdWrap.outerWrap = <div class="ce">|</div>
+	stdWrap.outerWrap = |
 
 	# Disable image rendering and jumpurl for filelist element
 	uploads.20 {
@@ -47,7 +47,7 @@ tt_content {
 		default.value = |
 
 		1 = TEXT
-		1.value = <div class="box">|</div>
+		1.value = <section>|</section>
 		2 = TEXT
 		2.value = <div class="box news">|</div>
 		3 = TEXT

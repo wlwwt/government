@@ -127,7 +127,9 @@
 		</f:render>  
 	
 		
-      <div class="span9">
+		<div class="span9">
+
+		<f:cObject typoscriptObjectPath="lib.content.main">
 
         <!-- Download
         ================================================== -->
@@ -261,16 +263,17 @@
           </ul>
         </section>
 		
-      </div>
+		</f:cObject>
+      
+		</div>
     </div>
 
   </div>
 
 
 
-    <!-- Footer
-    ================================================== -->
-    <footer class="footer">
+	<f:render partial="Page/footer">
+	<footer class="footer">
       <div class="container">        
         <ul class="footer-links">
           <li><a href="#">Impressum</a></li>
@@ -281,6 +284,8 @@
 		<p>Stadtverwaltung Musterstadt, Musterstraße 1, 12345 Musterstadt, Tel. 01234 56-0, Email: <a href="mailto:info@musterstadt.de">info@musterstadt.de</a></p>
       </div>
     </footer>
+	</f:render>
+   
 
 	</f:section>
 

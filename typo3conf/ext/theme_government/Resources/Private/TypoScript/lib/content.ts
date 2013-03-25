@@ -16,7 +16,7 @@
 #-------------------------------------------------------------------------------
 lib.content.main = COA
 lib.content.main {
-	stdWrap.wrap = <div class="content-main-inner">|</div>
+	stdWrap.wrap = |
 	stdWrap.innerWrap = <!–-TYPO3SEARCH_begin-–>|<!–-TYPO3SEARCH_end-–>
 	10 < styles.content.get
 }

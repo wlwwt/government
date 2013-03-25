@@ -7,7 +7,7 @@ lib.navigation.right {
 
 	10 = HMENU
 	10 {
-		special = list
+		special = directory
 		special.value = {$plugin.theme_configuration.navigation.right}
 
 		1 = TMENU
@@ -288,17 +288,17 @@ lib.navigation.languageswitch {
 
 
 #-------------------------------------------------------------------------------
-#	NAVIGATION: Footer (left)
+#	NAVIGATION: Footer
 #-------------------------------------------------------------------------------
-lib.navigation.footer-left = COA
-lib.navigation.footer-left {
-	stdWrap.wrap = <ul>|</ul>
+lib.navigation.footer = COA
+lib.navigation.footer {
+	stdWrap.wrap = |
 
 	10 = HMENU
 	10 {
 
-		special = list
-		special.value = {$plugin.theme_configuration.navigation.footer-left}
+		special = directory
+		special.value = {$plugin.theme_configuration.navigation.footer}
 
 		1 = TMENU
 		1 {
@@ -307,46 +307,27 @@ lib.navigation.footer-left {
 
 			NO = 1
 			NO {
-					wrapItemAndSub = <li>|</li>
+					wrapItemAndSub = <li>|</li><li class="muted">&middot;</li> |*| <li>|</li><li class="muted">&middot;</li> |*| <li>|</li>
 					ATagTitle.field = subtitle // title
 					stdWrap.htmlSpecialChars = 1
 			}
 
-			IFSUB <.NO
-			IFSUB {
-				wrapItemAndSub = <li class="subpages">|</li>
-			}
-		}
+			ACT < .NO
+			ACT.wrapItemAndSub = <li class="active">|</li><li class="muted">&middot;</li> |*| <li class="active">|</li><li class="muted">&middot;</li> |*| <li class="active">|</li>
 
-		2 <.1
-		2.wrap = <ul>|</ul>
-		3 <.1
-		3.wrap = <ul>|</ul>
+			CUR < .ACT
+		}
 	}
 }
 
 #-------------------------------------------------------------------------------
 #	NAVIGATION: Footer (right)
 #-------------------------------------------------------------------------------
-lib.navigation.footer-right = COA
-lib.navigation.footer-right {
-	stdWrap.wrap = <ul>|</ul>
-
-	10 = HMENU
-	10 {
-
-		special = list
-		special.value = {$plugin.theme_configuration.navigation.footer-right}
-
-		1 = TMENU
-		1 {
-			noBlur = 1
-
-			NO {
-					wrapItemAndSub = <li>|</li>
-					ATagTitle.field = subtitle // title
-					stdWrap.htmlSpecialChars = 1
-			}
-		}
+lib.navigation.footer.top = TEXT
+lib.navigation.footer.top {
+	wrap = |
+	data = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:toplink
+	typolink {
+		parameter.dataWrap = {getIndpEnv:TYPO3_REQUEST_URL}#top
 	}
 }
