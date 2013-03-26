@@ -24,9 +24,9 @@ page {
 			key.override.field = backend_layout
 
 			default = TEXT
-			default.value = EXT:theme_government/Resources/Private/Templates/basic_1col.html
+			default.value = EXT:theme_government/Resources/Private/Templates/default.html
 			2 = TEXT
-			2.value = EXT:theme_government/Resources/Private/Templates/modern_2col.html
+			2.value = EXT:theme_government/Resources/Private/Templates/gov_1col.html
 		}
 		#partialRootPath = EXT:theme_government/Resources/Private/Templates/
 		layoutRootPath = EXT:theme_government/Resources/Private/Templates/Layouts/

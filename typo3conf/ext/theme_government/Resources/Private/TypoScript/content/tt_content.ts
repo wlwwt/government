@@ -11,6 +11,26 @@
 # Changes of content element rendering
 # **********************************************************
 
+# *****************
+# Headlines
+# *****************
+lib.stdheader.10.1.dataWrap = <h1{register:headerClass}>|</h1>
+lib.stdheader.10.2.dataWrap = <h2{register:headerClass}>|</h2>
+lib.stdheader.10.3.dataWrap = <h3{register:headerClass}>|</h3>
+lib.stdheader.10.4.dataWrap = <h4{register:headerClass}>|</h4>
+lib.stdheader.10.5.dataWrap = <h5{register:headerClass}>|</h5>
+
+# *****************
+# CType: header
+# *****************
+tt_content.header = COA
+tt_content.header {
+	
+	10 = < lib.stdheader
+	10.10.1.dataWrap = <div class="page-header"><h1{register:headerClass}>|</h1></div>
+
+}
+
 tt_content {
 
 	# Every content element is wrapped inside a div
@@ -39,7 +59,8 @@ tt_content {
 		7.1.noBlur = 1
 		7.2.noBlur = 1
 	}
-
+	
+	# Content Element Layouts
 	stdWrap.innerWrap.cObject = CASE
 	stdWrap.innerWrap.cObject {
 		key.field = layout
@@ -48,29 +69,25 @@ tt_content {
 
 		1 = TEXT
 		1.value = <section>|</section>
-		2 = TEXT
-		2.value = <div class="box news">|</div>
-		3 = TEXT
-		3.value = <div class="box download">|</div>
-		4 = TEXT
-		4.value = <div class="box link-list">|</div>
-		5 = TEXT
-		5.value = <div class="box info">|</div>
-		6 = TEXT
-		6.value = <blockquote class="box citation">|</blockquote>
-		7 = TEXT
-		7.value = <div class="link-list-only">|</div>
-		8 = TEXT
-		8.value = <div class="alert alert-block">|</div>
-		9 = TEXT
-		9.value = <div class="alert alert-success alert-block">|</div>
-		10 = TEXT
-		10.value = <div class="alert alert-info alert-block">|</div>
-		11 = TEXT
-		11.value = <div class="alert alert-error alert-block">|</div>
 	}
 
-	stdWrap.innerWrap2 = | <p class="csc-linkToTop no-print"><a href="#"><i class="icon-eject"></i>{LLL:EXT:css_styled_content/pi1/locallang.xml:label.toTop}</a></p>
+	stdWrap.innerWrap2.cObject = COA
+	stdWrap.innerWrap2.cObject {
+		10 = TEXT
+		10 {
+			value = |
+		}
+		
+		20 = TEXT
+		20 {
+			wrap = <p class="pull-right">|</p>
+			data = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:toplink
+			typolink {
+			parameter.dataWrap = {getIndpEnv:TYPO3_REQUEST_URL}#top
+			}
+		}
+	}
+	
 
 	# Define different wrappers for content elements depending on the page column
 	#stdWrap.outerWrap.cObject = CASE

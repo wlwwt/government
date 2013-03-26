@@ -13,12 +13,9 @@
 			<label index="belayout.columns.left">Left side</label>
 			<label index="belayout.columns.right">Right side</label>
 
-			<label index="tt_content.layout.quotation">Quotation</label>
-			<label index="tt_content.layout.information">Information</label>
-			<label index="tt_content.layout.box-warning">Box Warning</label>
-			<label index="tt_content.layout.box-success">Box Success</label>
-			<label index="tt_content.layout.box-info">Box Info</label>
-			<label index="tt_content.layout.box-error">Box Error</label>
+			<!-- Content Element Layouts -->
+			<label index="tt_content.layout.section">Section</label>
+			<label index="tt_content.layout.none">None</label>
 
 			<!-- Frontend -->
 			<label index="search-placeholder">Search text</label>

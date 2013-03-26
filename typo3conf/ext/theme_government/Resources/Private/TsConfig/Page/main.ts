@@ -63,19 +63,19 @@ TCEFORM.tt_content {
 
 	# Erzeuge bei Elemente Einträge im Layoutdropdown für DIVs
 	layout.altLabels {
-		1 = Section
-		2 = Box News
-		3 = Box Download
+		1 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.section
+		2 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.none
+		3 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.none
 	}
 	layout.addItems {
-		4 = Box Link-Liste
-		5 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.information
-		6 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.quotation
+		#4 = Box Link-Liste
+		#5 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.information
+		#6 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.quotation
 		#7 = Link-Liste
-		8 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.box-warning
-		9 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.box-success
-		10 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.box-info
-		11 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.box-error
+		#8 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.box-warning
+		#9 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.box-success
+		#10 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.box-info
+		#11 = LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:tt_content.layout.box-error
 	}
 }
 

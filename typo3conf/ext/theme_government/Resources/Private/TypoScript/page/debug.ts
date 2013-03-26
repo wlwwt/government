@@ -15,21 +15,21 @@ page.headerData.50 = COA
 page.headerData.50 {
 	5 = TEXT
 	5.value (
-		<!--
-Debug
+
+<!--
 
 	)
 
 	10 = TEXT
 	10.insertData = !
 	10.value (
-		Page Uid: {page:uid} | Page Pid: {page:pid}
-		Sys_language: {TSFE:sys_language_uid} | Sys_language: {TSFE:sys_language_content}
+	Page Uid: {page:uid} | Page Pid: {page:pid}
+	Sys_language: {TSFE:sys_language_uid} | Sys_language: {TSFE:sys_language_content}
 	)
 
 	99 = TEXT
 	99.value (
 
-	-->
+-->
 	)
 }

@@ -46,7 +46,7 @@ RTE.default.buttons.link.properties.class.allowedClasses {
 RTE.default {
 
 	## RTE Stylesheet für benutzerdefinierte Formatauszeichnungen
-    contentCSS = typo3conf/ext/theme_edugroup/Resources/Public/Css/rte.css
+    contentCSS = typo3conf/ext/theme_government/Resources/Public/Template/css/government.min.css
 
 	## Markup options
 	enableWordClean = 1
