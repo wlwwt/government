@@ -1,3 +1,6 @@
 [submodule "res/bootstrap"]
 	path = res/bootstrap
 	url = git@github.com:twitter/bootstrap.git
+[submodule "typo3conf/ext/news"]
+	path = typo3conf/ext/news
+	url = git://git.typo3.org/TYPO3v4/Extensions/news.git
