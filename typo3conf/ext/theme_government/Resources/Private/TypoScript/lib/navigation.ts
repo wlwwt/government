@@ -137,7 +137,7 @@ lib.navigation.breadcrumb {
 
 			CUR = 1
 			CUR {
-				linkWrap = <li class="active">|</span>
+				linkWrap = <li class="active">|</li>
 				doNotLinkIt = 1
 			}
 		}

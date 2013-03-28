@@ -1,27 +1,10 @@
 {namespace n=Tx_News_ViewHelpers}
-<!--
-	=====================
-		Partials/List/Item.html
--->
-<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
-	<!-- header -->
-	<div class="header">
-		<h3>
-			<n:link newsItem="{newsItem}" settings="{settings}">
-				{newsItem.title}
-			</n:link>
-		</h3>
-		<!-- date -->
-			<span class="news-list-date">
-				<f:format.date format="d.m.Y">{newsItem.datetime}</f:format.date>
-			</span>
-	</div>
 
+<li class="media">
+	
 	<f:if condition="{newsItem.media}">
-		<!-- media preview element -->
 		<f:then>
-		<div class="news-img-wrap pull-left">
-			<n:link newsItem="{newsItem}" settings="{settings}">
+			<n:link newsItem="{newsItem}" settings="{settings}" class="pull-left">
 				<f:if condition="{newsItem.mediaPreviews}">
 					<f:then>
 						<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
@@ -32,6 +15,7 @@
 									alt="{mediaElement.title}"
 									maxWidth="{settings.list.media.image.maxWidth}"
 									maxHeight="{settings.list.media.image.maxHeight}"
+									class="media-object"
 								/>
 							</f:if>
 							<f:if condition="{mediaElement.type} == 1">
@@ -42,7 +26,7 @@
 							</f:if>
 							<f:if condition="{mediaElement.type} == 3">
 								<n:format.dam as="dam" uid="{mediaElement.uid}">
-									<f:image src="{dam.file_path}{dam.file_name}" title="{dam.title}"  alt="{dam.alt_text}" maxWidth="{settings.detail.media.image.maxWidth}" />
+									<f:image src="{dam.file_path}{dam.file_name}" title="{dam.title}"  alt="{dam.alt_text}" maxWidth="{settings.list.media.image.maxWidth}" />
 								</n:format.dam>
 							</f:if>
 						</f:alias>
@@ -55,7 +39,6 @@
 					</f:else>
 				</f:if>
 			</n:link>
-		</div>
 		</f:then>
 		<f:else>
 			<f:if condition="{settings.displayDummyIfNoMedia}">
@@ -73,16 +56,30 @@
 		</f:else>
 	</f:if>
 
-	<f:if condition="{newsItem.teaser}">
-		<!-- teaser text -->
-		<div class="teaser-text">
+	<div class="media-body">
+		<small><f:format.date format="d.m.Y">{newsItem.datetime}</f:format.date> - 
+			<f:for each="{newsItem.tags}" as="tag" iteration="iterator">
+				<f:if condition="{iterator.isLast}">
+						<f:then>
+							{tag.title}
+						</f:then>
+						<f:else>
+							{tag.title}, 
+						</f:else>
+				</f:if>
+			</f:for>
+		</small>
+		<n:link newsItem="{newsItem}" settings="{settings}"><h4 class="media-heading">{newsItem.title}</h4></n:link>
+		
+		<f:if condition="{newsItem.teaser}">
 			<f:then>
 				<f:format.html>{newsItem.teaser}</f:format.html>
 			</f:then>
 			<f:else>
 				<f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="true">{newsItem.bodytext}</f:format.crop></f:format.html>
 			</f:else>
-		</div>
-	</f:if>
-</div>
-<div class="clear"></div>
+		</f:if>
+		<p><n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-small"><f:translate key="LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:show" /></n:link></p>
+	</div>
+</li>
+<li class="soften"></li>

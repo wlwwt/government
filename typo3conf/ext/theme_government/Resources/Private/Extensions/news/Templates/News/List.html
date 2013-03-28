@@ -11,20 +11,20 @@
 
 		<f:if condition="{settings.isLatest}">
 			<f:then>
-				<div class="news well news-latest-view">
+				<ul class="media-list">
 					<f:for each="{news}" as="newsItem">
 						<f:render partial="List/Item-latest" arguments="{newsItem: newsItem, settings:settings}"/>
 					</f:for>
-				</div>
+				</ul>
 			</f:then>
 			<f:else>
-				<div class="news news-list-view">
+				<ul class="media-list">
 					<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}">
 							<f:for each="{paginatedNews}" as="newsItem">
 								<f:render partial="List/Item-list" arguments="{newsItem: newsItem, settings:settings}"/>
 							</f:for>
 					</n:widget.paginate>
-				</div>
+				</ul>
 			</f:else>
 		</f:if>
 	</f:then>

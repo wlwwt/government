@@ -10,8 +10,8 @@
 
 <f:section name="paginator">
 	<f:if condition="{pagination.numberOfPages} > 1">
-	<div class="pagination pagination-centered">
-		<ul class="f3-widget-paginator">
+	<div class="pagination">
+		<ul>
 			<f:if condition="{pagination.previousPage}">
 				<li class="previous">
 					<f:if condition="{pagination.previousPage} > 1">
@@ -58,6 +58,5 @@
 			</f:if>
 		</ul>
 	</div>
-	<div class="news-clear"></div>
 	</f:if>
 </f:section>

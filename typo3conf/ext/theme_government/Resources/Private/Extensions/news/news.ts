@@ -20,6 +20,23 @@ plugin.tx_news {
 	}
 
 	settings.list.paginate.insertAbove = 0
+	
+	settings.cropMaxCharacters = 220
+
+	settings.list.media.image.maxWidth = 250
+	settings.list.media.image.maxHeight = 250
+	
+	settings.list.paginate {
+		itemsPerPage = 3
+		insertAbove = 0
+		insertBelow = 1
+		lessPages = 1
+		forcedNumberOfLinks = 5
+		pagesBefore = 3
+		pagesAfter = 3
+		templatePath =
+		prevNextHeaderTags = 1
+	}
 }
 
 

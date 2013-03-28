@@ -28,7 +28,7 @@ page.headerData.5 {
 	#activate mobile ClearType technology for smoothing fonts for easy reading
 	90 = TEXT
 	90.value (
-<meta http-equiv="cleartype" content="on">
+<!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
 
 	)
 
