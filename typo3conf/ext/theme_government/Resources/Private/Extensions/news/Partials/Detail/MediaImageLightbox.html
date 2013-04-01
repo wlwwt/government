@@ -1,0 +1,14 @@
+<!-- -->
+<div id="demoLightbox{mediaElement.uid}" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="lightbox-header">
+		<button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button>
+	</div>
+	<div class="lightbox-content">
+		<f:image src="uploads/tx_news/{mediaElement.content}" title="{mediaElement.title}" alt="{mediaElement.alt}" maxWidth="{settings.detail.media.image.maxWidth}" />
+		<div class="lightbox-caption"><p>{mediaElement.caption}<f:if condition="{mediaElement.copyright}">&nbsp;&copy; {mediaElement.copyright}</f:if></p></div>
+		
+	</div>
+</div>
+<!-- -->
+	
+

@@ -1,0 +1,9 @@
+For combinind different js files in one project I use
+http://ajaxmin.codeplex.com/releases/view/103797 (only for windows)
+
+After installation there is a new Microsoft Ajax Minifier Command Prompt available.
+
+Make changes in javascript.xml
+
+Open Ajax Minifier Command Prompt and type in:
+ajaxmin –js –xml javascript.xml –clobber

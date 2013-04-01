@@ -45,9 +45,9 @@ page {
 
 	# JS files to be included
 	includeJSFooter {
-		file1 = EXT:theme_government/Resources/Public/Template/js/jquery.js
-		file2 = EXT:theme_government/Resources/Public/Template/js/bootstrap.min.js
-		file3 = EXT:theme_government/Resources/Public/Template/js/government.js
+		file1 = EXT:theme_government/Resources/Public/Template/js/jquery.min.1.9.1.js
+		file2 = EXT:theme_government/Resources/Public/Template/js/government.min.js
+		file3 = EXT:theme_government/Resources/Public/Template/js/application.js
 	}
 
 	includeJSFooterlibs {

@@ -17,9 +17,45 @@
 				</f:if>
 				<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}"/>
 			</n:format.nothing>
-			<div class="header">
-				<h3>{newsItem.title}</h3>
+			<h2>{newsItem.title}</h2>
+			
+			<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}"/>
+			
+			<f:if condition="{newsItem.teaser}">
+				<p class="lead">{newsItem.teaser}</p>
+			</f:if>
+			
+			<div class="row">
+				<div class="span3">
+					<p><i class="icon-calendar"></i> <f:format.date format="l, d.m.Y - H:i">{newsItem.datetime}</f:format.date></p>
+					<p><i class="icon-tags"></i> 
+						<f:for each="{newsItem.tags}" as="tag" iteration="iterator">
+							<f:if condition="{iterator.isLast}">
+								<f:then>
+									{tag.title}
+								</f:then>
+								<f:else>
+									{tag.title}, 
+								</f:else>
+							</f:if>
+						</f:for>
+					</p>
+					<f:if condition="{settings.detail.showSocialShareButtons}">
+						<div class="addthis">
+							<f:render partial="Detail/Addthis" arguments="{newsItem: newsItem, settings:settings}"/>
+						</div>
+					</f:if>
+					<hr class="soften">
+					<f:render partial="Detail/MediaContainerLightbox" arguments="{media: newsItem.media, settings:settings}"/>
+					
+					<hr class="soften">
+					<h4><f:translate key="LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:files" /></h4>
+				</div>
+				<div class="span9">
+					
+				</div>
 			</div>
+			
 			<div class="footer" role="contentinfo">
 				<p>
 					<!-- date -->
@@ -40,12 +76,7 @@
 				</p>
 			</div>
 
-			<f:if condition="{newsItem.teaser}">
-				<!-- teaser -->
-				<div class="teaser-text">
-					{newsItem.teaser}
-				</div>
-			</f:if>
+		
 
 			<f:if condition="{newsItem.contentElements}">
 				<!-- content elements -->

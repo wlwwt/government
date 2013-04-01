@@ -1,0 +1,38 @@
+<f:if condition="{media}">
+	<h4><f:translate key="LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:images" /></h4>
+	<div class="row-fluid">
+		<ul class="thumbnails">
+		<f:for each="{media}" as="mediaElement">
+			<f:if condition="{mediaElement.type} == 0">
+				<f:render partial="Detail/MediaImageSmall" arguments="{mediaElement: mediaElement, settings:settings}"/>
+			</f:if>
+			<f:if condition="{mediaElement.type} == 1">
+				<f:render partial="Detail/MediaVideoSmall" arguments="{mediaElement: mediaElement, settings:settings}"/>
+			</f:if>
+			<f:if condition="{mediaElement.type} == 2">
+				<f:render partial="Detail/MediaHtmlSmall" arguments="{mediaElement: mediaElement, settings:settings}"/>
+			</f:if>
+			<f:if condition="{mediaElement.type} == 3">
+				<f:render partial="Detail/MediaDamSmall" arguments="{mediaElement: mediaElement, settings:settings}"/>
+			</f:if>
+		</f:for>
+		</ul>
+	</div>
+</f:if>
+
+<f:if condition="{media}">
+	<f:for each="{media}" as="mediaElement">
+			<f:if condition="{mediaElement.type} == 0">
+				<f:render partial="Detail/MediaImageLightbox" arguments="{mediaElement: mediaElement, settings:settings}"/>
+			</f:if>
+			<f:if condition="{mediaElement.type} == 1">
+				<f:render partial="Detail/MediaVideoLightbox" arguments="{mediaElement: mediaElement, settings:settings}"/>
+			</f:if>
+			<f:if condition="{mediaElement.type} == 2">
+				<f:render partial="Detail/MediaHtmlLightbox" arguments="{mediaElement: mediaElement, settings:settings}"/>
+			</f:if>
+			<f:if condition="{mediaElement.type} == 3">
+				<f:render partial="Detail/MediaDamLightbox" arguments="{mediaElement: mediaElement, settings:settings}"/>
+			</f:if>
+		</f:for>
+</f:if>

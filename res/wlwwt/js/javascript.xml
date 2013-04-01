@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<root> 
+    <output path="../../../typo3conf/ext/theme_government/Resources/Public/Template/js/government.min.js"> 
+        <input path="../../bootstrap/js/bootstrap-affix.js"/> 
+        <input path="../../bootstrap/js/bootstrap-button.js"/> 
+        <input path="../../bootstrap/js/bootstrap-collapse.js"/> 
+        <input path="../../bootstrap/js/bootstrap-modal.js"/> 
+        <input path="../../bootstrap-lightbox/js/bootstrap-lightbox.js"/> 
+    </output> 
+</root>

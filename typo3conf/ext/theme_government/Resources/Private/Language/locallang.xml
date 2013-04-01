@@ -25,6 +25,10 @@
 			<label index="tip">Recommend page</label>
 			<label index="pdflink">As PDF</label>
 			<label index="download">Download</label>
+
+			<!-- News -->
+			<label index="images">Images</label>
+			<label index="files">Related files</label>
 		</languageKey>
 
 <!-- DE -->
@@ -36,6 +40,10 @@
 			<label index="tip">Seite weiterempfehlen</label>
 			<label index="pdflink">Als PDF</label>
 			<label index="download">Download</label>
+			
+			<!-- News -->
+			<label index="images">Bilder</label>
+			<label index="files">Dateien zum Thema</label>
 		</languageKey>
 
 	</data>

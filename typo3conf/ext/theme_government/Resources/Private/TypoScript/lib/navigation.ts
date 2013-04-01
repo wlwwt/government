@@ -155,12 +155,8 @@ lib.navigation.breadcrumb {
 		conf.tx_news_domain_model_news {
 			field = title
 			htmlSpecialChars = 1
-			typolink {
-				parameter.data = page:uid
-				addQueryString = 1
-			}
 		}
-		wrap =  <li class="last">|</li>
+		wrap =  <li class="active">|</li>
 	}
 }
 

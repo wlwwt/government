@@ -4,3 +4,6 @@
 [submodule "typo3conf/ext/news"]
 	path = typo3conf/ext/news
 	url = git://git.typo3.org/TYPO3v4/Extensions/news.git
+[submodule "res/bootstrap-lightbox"]
+	path = res/bootstrap-lightbox
+	url = git@github.com:jbutz/bootstrap-lightbox.git

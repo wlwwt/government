@@ -24,5 +24,16 @@ plugin.theme_configuration.general.footer.email = info@musterstadt.de
 plugin.theme_configuration.navigation.right = 6
 plugin.theme_configuration.navigation.footer = 12
 
+# **********************************************************
+# News
+# **********************************************************
+plugin.theme_configuration.news.detail = 20
+plugin.theme_configuration.news.crop = 220
+plugin.theme_configuration.news.list.width = 250
+plugin.theme_configuration.news.list.height = 250
+
+# **********************************************************
+# Assets
+# **********************************************************
 plugin.theme_configuration.assets.merge = 0
 plugin.theme_configuration.assets.compress = 0
