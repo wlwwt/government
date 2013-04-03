@@ -21,9 +21,12 @@ plugin.tx_news {
 	
 	settings {
 		defaultDetailPid = {$plugin.theme_configuration.news.detail}
+		backPid = {$plugin.theme_configuration.news.list}
 		cropMaxCharacters = {$plugin.theme_configuration.news.crop}
 		list {
 			paginate.insertAbove = 0
+			media.image.width = {$plugin.theme_configuration.news.list.cwidth}
+			media.image.height = {$plugin.theme_configuration.news.list.cheight}
 			media.image.maxWidth = {$plugin.theme_configuration.news.list.width}
 			media.image.maxHeight = {$plugin.theme_configuration.news.list.height}
 			paginate {
@@ -33,10 +36,11 @@ plugin.tx_news {
 			}
 		}
 		detail {
-			media.image.maxWidth = 974
-			showSocialShareButtons = 1
-			media.image.small.width = 150c
-			media.image.small.height = 150c
+			media.image.maxWidth = {$plugin.theme_configuration.news.detail.media.image.maxWidth}
+			showSocialShareButtons = {$plugin.theme_configuration.news.detail.showSocialShareButtons}
+			media.image.small.width = {$plugin.theme_configuration.news.detail.media.image.small.width}
+			media.image.small.height = {$plugin.theme_configuration.news.detail.media.image.small.height}
+			cropRelatedNews = {$plugin.theme_configuration.news.detail.cropRelatedNews}
 		}
 	}
 }

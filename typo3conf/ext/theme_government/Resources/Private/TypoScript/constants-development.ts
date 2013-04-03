@@ -28,9 +28,17 @@ plugin.theme_configuration.navigation.footer = 12
 # News
 # **********************************************************
 plugin.theme_configuration.news.detail = 20
-plugin.theme_configuration.news.crop = 220
+plugin.theme_configuration.news.list = 2
+plugin.theme_configuration.news.crop = 160
+plugin.theme_configuration.news.list.cwidth = 250c
+plugin.theme_configuration.news.list.cheight = 150c
 plugin.theme_configuration.news.list.width = 250
-plugin.theme_configuration.news.list.height = 250
+plugin.theme_configuration.news.list.height = 150
+plugin.theme_configuration.news.detail.cropRelatedNews = 30
+plugin.theme_configuration.news.detail.showSocialShareButtons = 1
+plugin.theme_configuration.news.detail.media.image.maxWidth = 974
+plugin.theme_configuration.news.detail.media.image.small.width = 200c
+plugin.theme_configuration.news.detail.media.image.small.height = 150c
 
 # **********************************************************
 # Assets

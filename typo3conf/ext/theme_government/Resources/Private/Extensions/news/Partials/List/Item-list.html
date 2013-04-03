@@ -13,6 +13,8 @@
 									src="uploads/tx_news/{mediaElement.image}"
 									title="{mediaElement.title}"
 									alt="{mediaElement.title}"
+									width="{settings.list.media.image.width}"
+									height="{settings.list.media.image.height}"
 									maxWidth="{settings.list.media.image.maxWidth}"
 									maxHeight="{settings.list.media.image.maxHeight}"
 									class="media-object"
@@ -73,7 +75,7 @@
 		
 		<f:if condition="{newsItem.teaser}">
 			<f:then>
-				<f:format.html>{newsItem.teaser}</f:format.html>
+				<f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="true">{newsItem.teaser}</f:format.crop></f:format.html>
 			</f:then>
 			<f:else>
 				<f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="true">{newsItem.bodytext}</f:format.crop></f:format.html>

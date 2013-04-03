@@ -29,6 +29,9 @@
 			<!-- News -->
 			<label index="images">Images</label>
 			<label index="files">Related files</label>
+			<label index="links">Related links</label>
+			<label index="news">Related news</label>
+			<label index="back">back to overview</label>
 		</languageKey>
 
 <!-- DE -->
@@ -44,6 +47,9 @@
 			<!-- News -->
 			<label index="images">Bilder</label>
 			<label index="files">Dateien zum Thema</label>
+			<label index="links">Links zum Thema</label>
+			<label index="news">Ähnliche Themen</label>
+			<label index="back">zurück zur Übersicht</label>
 		</languageKey>
 
 	</data>
