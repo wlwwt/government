@@ -1,0 +1,23 @@
+User-agent: *
+
+Disallow: /typo3/
+Disallow: /fileadmin/
+Allow:/fileadmin/media
+Allow:/fileadmin/user_upload
+Allow:/fileadmin/sitemap/
+Disallow: /typo3temp/
+Disallow: /uploads/
+Disallow: /t3lib/
+Disallow: /typo3conf/
+
+Allow: /*.htm$
+Allow: /index.php
+
+Disallow: /*.cgi$
+Disallow: /*.css$
+Disallow: /*.gz$
+Disallow: /*.inc$
+Disallow: /*.js$
+Disallow: /*.tpl$
+
+
