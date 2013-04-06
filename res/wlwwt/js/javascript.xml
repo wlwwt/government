@@ -5,6 +5,8 @@
         <input path="../../bootstrap/js/bootstrap-button.js"/> 
         <input path="../../bootstrap/js/bootstrap-collapse.js"/> 
         <input path="../../bootstrap/js/bootstrap-modal.js"/> 
+        <input path="../../bootstrap/js/bootstrap-tab.js"/> 
         <input path="../../bootstrap-lightbox/js/bootstrap-lightbox.js"/> 
+        <input path="jquery.easyListSplitter.js"/> 
     </output> 
 </root>

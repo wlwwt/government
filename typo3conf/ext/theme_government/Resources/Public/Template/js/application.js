@@ -11,6 +11,9 @@
 			, bottom: 270
 			}
 		  })
-		}, 100)
+		}, 100);
+		
+		$('.splitlist').easyListSplitter({ colNumber: 2 });
+		
 	})
 }(window.jQuery)
