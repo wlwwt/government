@@ -7,3 +7,6 @@
 [submodule "res/bootstrap-lightbox"]
 	path = res/bootstrap-lightbox
 	url = git://github.com/jbutz/bootstrap-lightbox.git
+[submodule "typo3conf/ext/realurl"]
+	path = typo3conf/ext/realurl
+	url = git://github.com/TYPO3-Extensions/realurl.git
