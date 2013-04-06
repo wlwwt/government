@@ -8,30 +8,42 @@
 
 
 # **********************************************************
-# Constants of the PRODUCTION mode
+# Constants of the Production mode
 # **********************************************************
 
-plugin.theme_configuration.company = Modern Package
-plugin.theme_configuration.popup = &copy; - Modern Package
-plugin.theme_configuration.title = Modern Package
-plugin.theme_configuration.url = http://localhost/master/
+plugin.theme_configuration.url = http://government.wlwwt.de/
+
+plugin.theme_configuration.realurl.enable = 0
+
+plugin.theme_configuration.general.header.logo.link = 1
+plugin.theme_configuration.general.header.logo.image = typo3conf/ext/theme_government/Resources/Public/Template/img/dummylogo.jpg
+plugin.theme_configuration.general.header.name = Stadt Musterstadt
+
+plugin.theme_configuration.general.footer.address = Stadtverwaltung Musterstadt, Musterstraße 1, 12345 Musterstadt, Tel. 01234 56-0, Email:
+plugin.theme_configuration.general.footer.email = info@musterstadt.de
 
 
-plugin.theme_configuration.navigation_service = 232
-plugin.theme_configuration.navigation_service-right = 238
-plugin.theme_configuration.navigation_languageswitch.languages = 0,1,2
-plugin.theme_configuration.navigation_languageswitch.labels = English |*| German |*| Italian
-plugin.theme_configuration.navigation.footer-right = 1,254,274,250
-plugin.theme_configuration.navigation.footer-left = 249
-plugin.theme_configuration.general.copyright_information.link = 242
+plugin.theme_configuration.navigation.right = 6
+plugin.theme_configuration.navigation.footer = 12
 
-plugin.theme_configuration.assets.merge = 1
-plugin.theme_configuration.assets.compress = 1
+# **********************************************************
+# News
+# **********************************************************
+plugin.theme_configuration.news.detail = 20
+plugin.theme_configuration.news.list = 2
+plugin.theme_configuration.news.crop = 160
+plugin.theme_configuration.news.list.cwidth = 250c
+plugin.theme_configuration.news.list.cheight = 150c
+plugin.theme_configuration.news.list.width = 250
+plugin.theme_configuration.news.list.height = 150
+plugin.theme_configuration.news.detail.cropRelatedNews = 30
+plugin.theme_configuration.news.detail.showSocialShareButtons = 1
+plugin.theme_configuration.news.detail.media.image.maxWidth = 974
+plugin.theme_configuration.news.detail.media.image.small.width = 200c
+plugin.theme_configuration.news.detail.media.image.small.height = 150c
 
-plugin.theme_configuration.extensions.indexed_search.form-target = 241
-plugin.theme_configuration.extensions.news.latest {
-	limit = 3
-	detailPid = 259
-	startingpoint = 260
-	cropMaxCharacters = 120
-}
+# **********************************************************
+# Assets
+# **********************************************************
+plugin.theme_configuration.assets.merge = 0
+plugin.theme_configuration.assets.compress = 0

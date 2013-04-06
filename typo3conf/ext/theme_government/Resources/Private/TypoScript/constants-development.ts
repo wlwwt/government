@@ -13,6 +13,8 @@
 
 plugin.theme_configuration.url = http://localhost/government/
 
+plugin.theme_configuration.realurl.enable = 0
+
 plugin.theme_configuration.general.header.logo.link = 1
 plugin.theme_configuration.general.header.logo.image = typo3conf/ext/theme_government/Resources/Public/Template/img/dummylogo.jpg
 plugin.theme_configuration.general.header.name = Stadt Musterstadt
