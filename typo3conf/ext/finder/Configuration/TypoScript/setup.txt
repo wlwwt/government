@@ -1,0 +1,235 @@
+
+# ==============================================
+# FE-Plugin configuration for EXT:finder
+# ==============================================
+plugin.tx_finder {
+	mvc.callDefaultActionIfActionCantBeResolved = 1
+
+	persistence {
+		classes {
+			Tx_Finder_Domain_Model_Finder {
+				subclasses {
+					0 = Tx_Finder_Domain_Model_FinderDefault
+					1 = Tx_Finder_Domain_Model_FinderExternal
+					2 = Tx_Finder_Domain_Model_FinderInternal
+				}
+			}
+
+
+			Tx_Finder_Domain_Model_FinderDefault {
+				mapping {
+					recordType = 0
+					tableName = tx_finder_domain_model_finder
+				}
+			}
+			Tx_Finder_Domain_Model_FinderExternal {
+				mapping {
+					recordType = 1
+					tableName = tx_finder_domain_model_finder
+				}
+			}
+
+			Tx_Finder_Domain_Model_FinderInternal {
+				mapping {
+					recordType = 2
+					tableName = tx_finder_domain_model_finder
+				}
+			}
+		}
+	}
+	view {
+		templateRootPath = {$plugin.tx_finder.view.templateRootPath}
+		partialRootPath = {$plugin.tx_finder.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_finder.view.layoutRootPath}
+	}
+	# Modify the translation
+	_LOCAL_LANG {
+		default {
+			# read_more = more >>
+		}
+	}
+
+	# ====================================
+	# Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
+	# ====================================
+	settings {
+		cssFile = {$plugin.tx_finder.settings.cssFile}
+
+		#Displays a dummy image if the finder have no media items
+		displayDummyIfNoMedia = 1
+
+		# Output format
+		format = html
+
+		# general settings
+		overrideFlexformSettingsIfEmpty = cropMaxCharacters,dateField,timeRestriction,orderBy,orderDirection,backPid,listPid
+
+		includeSubCategories = 0
+
+		analytics {
+			social {
+				facebookLike = 1
+				facebookShare = 1
+				twitter = 1
+			}
+		}
+
+		detailPidDetermination = flexform, categories, default
+
+		defaultDetailPid = 0
+		dateField = datetime
+
+		link {
+			typesOpeningInNewWindow = 2
+			hrDate = 0
+			hrDate {
+				day = j
+				month = n
+				year = Y
+			}
+
+			skipControllerAndAction = 0
+		}
+
+		cropMaxCharacters = 150
+		orderBy = datetime
+		orderDirection = desc
+		orderByRespectTopFinder = 0
+		orderByAllowed = author,uid,title,teaser,author,tstamp,crdate,datetime,categories.title
+
+		facebookLocale = en_US
+		googlePlusLocale = en
+		disqusLocale = en
+
+		# Interface implementations
+		interfaces {
+			media {
+				video = Tx_Finder_MediaRenderer_Audio_Mp3,Tx_Finder_MediaRenderer_Video_Quicktime,Tx_Finder_MediaRenderer_Video_File,Tx_Finder_MediaRenderer_Video_Youtube,Tx_Finder_MediaRenderer_Video_Videosites
+			}
+		}
+
+		# --------------
+		#  Search
+		# --------------
+		search {
+			fields = teaser,title,bodytext
+		}
+
+		# --------------
+		#  Detail
+		# --------------
+		detail {
+			registerProperties = keywords,title
+			showSocialShareButtons = 1
+
+			# media configuration
+			media {
+				image {
+						# choose the rel tag like gallery[fo]
+					lightbox = lightbox[myImageSet]
+					maxWidth = 282
+				}
+
+				video {
+					width = 282
+					height = 300
+				}
+			}
+		}
+
+		# --------------
+		#  List
+		# --------------
+		list {
+			# media configuration
+			media {
+				image {
+					maxWidth = 100
+					maxHeight = 100
+				}
+			}
+
+			# Paginate configuration.
+			paginate {
+				itemsPerPage = 10
+				insertAbove = 1
+				insertBelow = 1
+				lessPages = 1
+				forcedNumberOfLinks = 5
+				pagesBefore = 3
+				pagesAfter = 3
+				templatePath =
+				prevNextHeaderTags = 1
+			}
+
+			rss {
+				channel {
+					title = {$plugin.tx_finder.rss.channel.title}
+					description = {$plugin.tx_finder.rss.channel.description}
+					language = {$plugin.tx_finder.rss.channel.language}
+					copyright = {$plugin.tx_finder.rss.channel.copyright}
+					generator = {$plugin.tx_finder.rss.channel.generator}
+					link = {$plugin.tx_finder.rss.channel.link}
+				}
+			}
+		}
+
+		# --------------
+		#  Common
+		# --------------
+		relatedFiles {
+			download {
+				labelStdWrap {
+					cObject = TEXT
+				}
+			}
+		}
+
+		# Opengraph implementation
+		opengraph {
+		    site_name = Perfect test site
+		    type = article
+			admins =
+			email =
+			phone_number =
+			fax_number =
+			latitude =
+			longitude =
+			street-adress =
+			locality =
+			region =
+			postal-code =
+			country-name =
+		}
+	}
+}
+
+# Rendering of content elements in detail view
+lib.tx_finder.contentElementRendering = RECORDS
+lib.tx_finder.contentElementRendering {
+	tables = tt_content
+	source.current = 1
+	dontCheckPid = 1
+}
+
+
+# ==============================================
+# BE-module configuration for EXT:finder
+# ==============================================
+module.tx_finder < plugin.tx_finder
+
+# ==============================================
+# Mapping of tt_content and its properties
+# ==============================================
+config.tx_extbase.persistence.classes {
+	Tx_Finder_Domain_Model_External_TtContent {
+		mapping {
+			tableName = tt_content
+			columns {
+				altText.mapOnProperty = altText
+				titleText.mapOnProperty = titleText
+				colPos.mapOnProperty = colPos
+			}
+		}
+	}
+}

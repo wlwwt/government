@@ -1,0 +1,11 @@
+{namespace n=Tx_Finder_ViewHelpers}
+
+<f:if condition="{settings.cssFile}">
+	<n:includeFile path="{settings.cssFile}" />
+</f:if>
+
+<div class="finder finder-single">
+	<div class="article">
+		<f:render section="content" />
+	</div>
+</div>

@@ -1,0 +1,24 @@
+plugin.tx_finder {
+	rss.channel {
+		title = Dummy Title
+		description =
+		link = http://example.com
+		language = en_GB
+		copyright = TYPO3 Finder
+		category =
+		generator = TYPO3 EXT:finder
+	}
+	view {
+		 # cat=plugin.tx_finder/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:finder/Resources/Private/Templates/
+		 # cat=plugin.tx_finder/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:finder/Resources/Private/Partials/
+		 # cat=plugin.tx_finder/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:finder/Resources/Private/Layouts/
+	}
+
+		settings {
+			 # cat=plugin.tx_finder/file; type=string; label=Path to CSS file
+	 		cssFile = EXT:finder/Resources/Public/Css/finder-basic.css
+		}
+}

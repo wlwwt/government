@@ -1,0 +1,42 @@
+{namespace n=Tx_Finder_ViewHelpers}
+
+<f:if condition="{finderItem.alternativeTitle}">
+	<f:then><n:metaTag property="og:title" content="{finderItem.alternativeTitle}" /></f:then>
+	<f:else><n:metaTag property="og:title" content="{finderItem.title}" /></f:else>
+</f:if>
+<n:metaTag property="og:type" content="{settings.opengraph.type}" />
+<n:metaTag property="og:url" content="" useCurrentDomain="1" />
+<n:metaTag property="og:site_name" content="{settings.opengraph.site_name}" />
+
+<f:if condition="{finderItem.firstImagePreview.image}">
+	<f:then>
+		<n:metaTag
+				property="og:image"
+				content="{f:uri.image(src:'uploads/tx_finder/{finderItem.firstImagePreview.image}' maxWidth:'100')}"
+				forceAbsoluteUrl="1" />
+	</f:then>
+	<f:else>
+		<f:if condition="{finderItem.firstImagePreview.dam}">
+			<n:format.dam as="dam" uid="{finderItem.firstImagePreview.uid}">
+				<n:metaTag
+						property="og:image"
+						content="{f:uri.image(src:'{dam.file_path}{dam.file_name}' maxWidth:'100')}"
+						forceAbsoluteUrl="1" />
+			</n:format.dam>
+		</f:if>
+	</f:else>
+</f:if>
+
+<n:metaTag property="fb:admins" content="{settings.opengraph.admins}" />
+<n:metaTag property="og:description" content="{finderItem.teaser}" />
+<n:metaTag property="fb:admins" content="{settings.opengraph.admins}" />
+<n:metaTag property="og:email" content="{settings.opengraph.email}" />
+<n:metaTag property="og:phone_number" content="{settings.opengraph.phone_number}" />
+<n:metaTag property="og:fax_number" content="{settings.opengraph.fax_number}" />
+<n:metaTag property="og:latitude" content="{settings.opengraph.latitude}" />
+<n:metaTag property="og:longitude" content="{settings.opengraph.longitude}" />
+<n:metaTag property="og:street-address" content="{settings.opengraph.street-address}" />
+<n:metaTag property="og:locality" content="{settings.opengraph.locality}" />
+<n:metaTag property="og:region" content="{settings.opengraph.region}" />
+<n:metaTag property="og:postal-code" content="{settings.opengraph.postal-code}" />
+<n:metaTag property="og:country-name" content="{settings.opengraph.country-name}" />

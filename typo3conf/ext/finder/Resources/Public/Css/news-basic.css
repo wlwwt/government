@@ -1,0 +1,253 @@
+/**************************************/
+/* Default styles for finder extension */
+/**************************************/
+
+.finder .clear {
+	clear: both;
+}
+
+.finder .nav ul {
+	float: left;
+	display: inline;
+	margin: 0;
+}
+
+.finder .nav li {
+	float: left;
+}
+
+.finder .nav a {
+	float: left;
+	display: block;
+}
+
+.finder .nav:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.finder .article {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+
+.finder .article:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.finder .article:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.finder .article .finder-img-wrap {
+	float: left;
+	margin: 3px 12px 5px 0;
+	background: #fff;
+}
+
+.finder .article .finder-img-wrap a {
+	display: block;
+	float: left;
+	padding: 4px;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+
+.finder .article .finder-img-wrap img {
+	float: left;
+	height: auto;
+}
+
+.finder .article h3 {
+	font-size: 1.25em;
+	margin-bottom: 0;
+}
+
+.finder .article .teaser-text {
+	margin: 0 0 10px 0;
+}
+
+.finder .footer {
+	clear: both;
+	padding: 10px 0 0 0;
+	border-top: 1px solid #eee;
+	margin-top: 15px;
+	color: #888;
+}
+
+.finder .footer p {
+	line-height: 1em;
+}
+
+.finder .footer span {
+	display: inline-block;
+	padding-right: 8px;
+	margin-right: 8px;
+	border-right: 1px solid #ddd;
+}
+
+.finder .footer span:last-child {
+	border-right: 0;
+}
+
+.finder .footer .finder-category a {
+	text-transform: uppercase;
+}
+
+/* category menu view */
+.finder-category-view ul li {
+	padding: 5px 8px;
+}
+
+.finder-category-view ul li li {
+	padding: 2px 8px 2px 12px;
+}
+
+.finder-category-view > ul > li:nth-child(even) {
+	background: #f9f9f9;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+.finder-category-view .category-desc {
+	padding-left: 10px;
+	margin-left: 10px;
+	border-left: 1px solid #ddd;
+}
+
+.finder-browsebox {
+	margin: 15px 0;
+	padding-top: 10px;
+	border-top: 1px solid #eee;
+}
+
+.finder-browsebox ul li {
+	margin: 0 5px;
+}
+
+.finder-browsebox ul .prev {
+	margin-right: 20px;
+	margin-left: 0;
+}
+
+.finder-browsebox ul .current-page a {
+	font-weight: bold;
+}
+
+.finder-browsebox ul .next {
+	margin-left: 20px;
+	margin-right: 0;
+}
+
+/* single view */
+.finder-single .footer {
+	margin-bottom: 20px;
+	margin-top: 5px;
+	padding: 10px 0 0 0;
+	border-bottom: 0;
+	border-top: 1px solid #eee;
+}
+
+.finder-single .article .finder-img-wrap {
+	float: right;
+	width: 282px;
+	margin: 0 0 0 25px;
+}
+
+.finder-single .teaser-text {
+	font-size: 15px;
+	color: #888;
+}
+
+.finder-text-wrap {
+	margin-bottom: 10px;
+}
+
+.finder-single .article .finder-img-wrap img {
+	float: none;
+}
+
+.finder-img-caption {
+	color: #888;
+}
+
+/* related finder + files */
+.finder-related-wrap {
+	display: table;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.finder-related {
+	width: 50%;
+	padding: 15px;
+	border: 1px solid #eee;
+	display: table-cell;
+}
+
+.finder-related ul li {
+	line-height: 1em;
+	margin-bottom: 12px;
+}
+
+.finder-related h4 {
+	margin-bottom: 10px;
+}
+
+.finder-related ul li span {
+	border-right: 1px solid #DDDDDD;
+	display: inline-block;
+	margin-right: 8px;
+	padding-right: 8px;
+	color: #888;
+}
+
+.finder-related ul li span:last-child {
+	border-right: 0;
+	padding-right: 0;
+}
+
+.finder-related-files ul li {
+	margin-bottom: 20px;
+}
+
+.finder-related-files .finder-related-files-link .jpg {
+	background-position: 0 0;
+}
+
+.finder .page-navigation p {
+	float: left;
+}
+
+.finder .page-navigation ul {
+	float: right;
+}
+
+.finder .page-navigation ul li {
+	float: left;
+	display: block;
+	padding: 0 1px;
+	background: none;
+}
+
+.finder .page-navigation ul li a {
+	display: block;
+	padding: 1px 2px;
+}
+
+.finder-clear {
+	clear: both;
+}
+
+.finder .no-finder-found {
+	color: #DB0202;
+	font-style: italic;
+}

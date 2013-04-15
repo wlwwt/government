@@ -1,0 +1,17 @@
+{namespace n=Tx_Finder_ViewHelpers}
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/Finder/SearchForm.html
+-->
+
+<f:section name="content">
+	<div class="finder-search-form">
+		<f:form object="{search}" name="search">
+			<fieldset>
+				<f:form.textfield property="subject" />
+				<f:form.submit value="{f:translate(key:'search-start')}" />
+			</fieldset>
+		</f:form>
+	</div>
+</f:section>

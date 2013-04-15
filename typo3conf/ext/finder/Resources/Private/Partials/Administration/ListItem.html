@@ -1,0 +1,48 @@
+{namespace n=Tx_Finder_ViewHelpers}
+
+<tr class="db_list_normal">
+	<td>
+		<n:be.clickmenu table="tx_finder_domain_model_finder" uid="{finderItem.uid}">
+			<n:be.buttons.iconForRecord table="tx_finder_domain_model_finder" uid="{finderItem.uid}" title="" />
+		</n:be.clickmenu>
+
+		<n:be.buttons.icon uri="#" onclick="window.location.href='alt_doc.php?returnUrl='+T3_THIS_LOCATION+'&edit[tx_finder_domain_model_finder][{finderItem.uid}]=edit'; return false;"
+			icon="tcarecords-tx_finder_domain_model_finder-default" title="Info" />
+
+		<span title="UID: {finderItem.uid}">{finderItem.title}</span>
+	</td>
+	<td>
+		<f:if condition="{finderItem.isTopFinder}">
+			<f:then>Yes</f:then>
+			<f:else>No</f:else>
+		</f:if>
+	</td>
+	<td>
+		<f:format.date>{finderItem.dateTime}</f:format.date>
+	</td>
+	<td>
+		<f:format.date>{finderItem.archive}</f:format.date>
+	</td>
+	<td>
+		<f:format.date>{finderItem.tstamp}</f:format.date>
+	</td>
+	<td>
+		<f:if condition="{finderItem.author}">
+			<strong>
+				<f:translate key="LLL:EXT:cms/locallang_tca.xml:pages.author_formlabel" />
+				:</strong> {finderItem.author}<br />
+		</f:if>
+		<f:if condition="{finderItem.categories}">
+			<strong>
+				<f:translate key="LLL:EXT:finder/Resources/Private/Language/locallang_db.xml:tx_finder_domain_model_finder.categories" />
+				:</strong>
+			<f:for each="{finderItem.categories}" as="category" iteration="iterator">
+				<span title="UID: {category.uid}">{category.title}</span>
+				<f:if condition="{iterator.isLast}">
+					<f:then></f:then>
+					<f:else>,</f:else>
+				</f:if>
+			</f:for>
+		</f:if>
+	</td>
+</tr>

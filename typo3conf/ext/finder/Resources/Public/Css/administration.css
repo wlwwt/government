@@ -1,0 +1,82 @@
+.clear {
+	clear: both;
+}
+
+#finder-administration .category-tree {
+	float: left;
+}
+
+#finder-administration .category-tree ul {
+	margin: 1px 0 1px 10px;
+}
+
+#finder-administration .form {
+	float: left;
+	border-right: 1px solid #ccc;
+	/*	margin:0 10px;*/
+	padding-right: 10px;
+}
+
+#finder-administration .settings {
+	padding: 4px;
+	margin: 4px;
+	border: 1px solid #ccc;
+	background: #eee;
+}
+
+#finder-administration .settings .field {
+	padding: 2px 0;
+}
+
+#finder-administration .settings .category-tree li {
+	margin: 3px 0;
+}
+
+#finder-administration .settings .category-tree li label {
+	padding: 0;
+	margin: 0;
+}
+
+#finder-administration .settings .category-tree input {
+	margin-right: 2px;
+}
+
+#finder-administration .settings .form .field label {
+	display: block;
+	float: left;
+	width: 150px;
+}
+
+#finder-administration .settings .submit {
+	margin: 5px 0 3px 10px;
+}
+
+#finder-administration .result .item {
+	padding: 1px;
+}
+
+#finder-administration .result .item a {
+	font-style: italic;
+}
+
+#finder-administration .result .item a:hover {
+	text-decoration: underline;
+}
+
+#finder-administration .page-tree td.icon {
+	/*	width:100px;*/
+	/*	font-size: 1px;*/
+	/*	line-height: 1px;*/
+}
+
+#finder-administration .page-tree td {
+	vertical-align: middle;
+}
+
+#finder-administration table.page-tree {
+	width: auto;
+}
+
+#finder-administration table.page-tree .hide {
+	opacity: 0.5;
+}

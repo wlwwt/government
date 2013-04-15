@@ -1,0 +1,34 @@
+{namespace n=Tx_Finder_ViewHelpers}
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/Finder/List.html
+-->
+
+<f:section name="content">
+	<f:if condition="{finder}">
+		<f:then>
+			<div class="finder-list-view">
+				<f:if condition="{settings.hidePagination}">
+					<f:then>
+						<f:for each="{finder}" as="finderItem">
+							<f:render partial="List/Item" arguments="{finderItem: finderItem, settings:settings}" />
+						</f:for>
+					</f:then>
+					<f:else>
+						<n:widget.paginate objects="{finder}" as="paginatedFinder" configuration="{settings.list.paginate}">
+							<f:for each="{paginatedFinder}" as="finderItem">
+								<f:render partial="List/Item" arguments="{finderItem: finderItem, settings:settings}" />
+							</f:for>
+						</n:widget.paginate>
+					</f:else>
+				</f:if>
+			</div>
+		</f:then>
+		<f:else>
+			<div class="no-finder-found">
+				<f:translate key="list_nofinderfound" />
+			</div>
+		</f:else>
+	</f:if>
+</f:section>
