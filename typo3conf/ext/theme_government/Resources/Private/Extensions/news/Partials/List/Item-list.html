@@ -1,10 +1,12 @@
 {namespace n=Tx_News_ViewHelpers}
 
 <li class="media">
+<n:link newsItem="{newsItem}" settings="{settings}">
 	
+
 	<f:if condition="{newsItem.media}">
 		<f:then>
-			<n:link newsItem="{newsItem}" settings="{settings}" class="pull-left">
+			
 				<f:if condition="{newsItem.mediaPreviews}">
 					<f:then>
 						<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
@@ -17,7 +19,7 @@
 									height="{settings.list.media.image.height}"
 									maxWidth="{settings.list.media.image.maxWidth}"
 									maxHeight="{settings.list.media.image.maxHeight}"
-									class="media-object"
+									class="media-object pull-left"
 								/>
 							</f:if>
 							<f:if condition="{mediaElement.type} == 1">
@@ -40,7 +42,6 @@
 						</span>
 					</f:else>
 				</f:if>
-			</n:link>
 		</f:then>
 		<f:else>
 			<f:if condition="{settings.displayDummyIfNoMedia}">
@@ -71,7 +72,7 @@
 				</f:if>
 			</f:for>
 		</small>
-		<n:link newsItem="{newsItem}" settings="{settings}"><h3 class="media-heading">{newsItem.title}</h3></n:link>
+		<h3 class="media-heading">{newsItem.title}</h3>
 		
 		<f:if condition="{newsItem.teaser}">
 			<f:then>
@@ -83,5 +84,6 @@
 		</f:if>
 		<p><n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-small"><f:translate key="LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:show" /></n:link></p>
 	</div>
+</n:link>	
 </li>
 <li class="soften"></li>
