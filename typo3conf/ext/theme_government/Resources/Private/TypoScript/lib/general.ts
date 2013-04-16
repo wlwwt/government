@@ -40,25 +40,3 @@ lib.general.footer.address {
 		typolink.parameter = {$plugin.theme_configuration.general.footer.email}
 	}
 }
-
-#-------------------------------------------------------------------------------
-#	GENERAL: Header slogan
-#-------------------------------------------------------------------------------
-lib.header_slogan = COA
-lib.header_slogan {
-	10 = TEXT
-	10 {
-		value = III Modern <div>package</div>
-	}
-}
-
-#-------------------------------------------------------------------------------
-#	GENERAL: Footer image
-#-------------------------------------------------------------------------------
-lib.footer_logo = COA
-lib.footer_logo {
-	10 = IMAGE
-	10 {
-		file = EXT:theme_government/Resources/Public/Template/img/logo-government-package-footer.png
-	}
-}
