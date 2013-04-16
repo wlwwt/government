@@ -18,13 +18,13 @@
 				</ul>
 			</f:then>
 			<f:else>
-				<ul class="media-list">
-					<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}">
-							<f:for each="{paginatedNews}" as="newsItem">
-								<f:render partial="List/Item-list" arguments="{newsItem: newsItem, settings:settings}"/>
-							</f:for>
-					</n:widget.paginate>
-				</ul>
+				<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}">
+					<ul class="media-list">
+						<f:for each="{paginatedNews}" as="newsItem">
+							<f:render partial="List/Item-list" arguments="{newsItem: newsItem, settings:settings}"/>
+						</f:for>
+					</ul>
+				</n:widget.paginate>
 			</f:else>
 		</f:if>
 	</f:then>

@@ -47,12 +47,10 @@
 			<f:if condition="{settings.displayDummyIfNoMedia}">
 				<f:then>
 					<div class="news-img-wrap pull-left">
-						<n:link newsItem="{newsItem}" settings="{settings}">
 							<span class="no-media-element">
 								<f:image src="typo3conf/ext/news/Resources/Public/Images/dummy-preview-image.png" title=""  alt="" maxWidth="{settings.list.media.image.maxWidth}"
 									maxHeight="{settings.list.media.image.maxHeight}"/>
 							</span>
-						</n:link>
 					</div>
 				</f:then>
 			</f:if>
@@ -82,7 +80,7 @@
 				<f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="true">{newsItem.bodytext}</f:format.crop></f:format.html>
 			</f:else>
 		</f:if>
-		<p><n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-small"><f:translate key="LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:show" /></n:link></p>
+		<p class="btn btn-small"><f:translate key="LLL:EXT:theme_government/Resources/Private/Language/locallang.xml:show" /></p>
 	</div>
 </n:link>	
 </li>
