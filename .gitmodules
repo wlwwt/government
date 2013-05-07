@@ -9,7 +9,7 @@
 	url = git://github.com/jbutz/bootstrap-lightbox.git
 [submodule "typo3conf/ext/realurl"]
 	path = typo3conf/ext/realurl
-	url = git://github.com/TYPO3-Extensions/realurl.git
+	url = git://git.typo3.org/TYPO3v4/Extensions/realurl.git
 [submodule "res/gmaps"]
 	path = res/gmaps
 	url = git://github.com/HPNeo/gmaps.git
