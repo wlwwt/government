@@ -13,3 +13,6 @@
 [submodule "res/gmaps"]
 	path = res/gmaps
 	url = git://github.com/HPNeo/gmaps.git
+[submodule "typo3conf/ext/dd_googlesitemap"]
+	path = typo3conf/ext/dd_googlesitemap
+	url = git://github.com/dmitryd/typo3_dd_googlesitemap.git
