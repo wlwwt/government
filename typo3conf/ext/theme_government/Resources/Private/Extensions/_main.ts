@@ -11,5 +11,5 @@
 # **********************************************************
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/Extensions/extbase.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/Extensions/indexed_search.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/Extensions/news/news.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_government/Resources/Private/Extensions/solr/solr.ts">

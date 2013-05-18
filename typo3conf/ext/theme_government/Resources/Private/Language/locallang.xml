@@ -25,6 +25,8 @@
 			<label index="tip">Recommend page</label>
 			<label index="pdflink">As PDF</label>
 			<label index="download">Download</label>
+			<label index="search-placeholder">Enter search term...</label>
+			<label index="search">Search</label>
 
 			<!-- News -->
 			<label index="images">Images</label>
@@ -43,6 +45,8 @@
 			<label index="tip">Seite weiterempfehlen</label>
 			<label index="pdflink">Als PDF</label>
 			<label index="download">Download</label>
+			<label index="search-placeholder">Suchbegriff eingeben...</label>
+			<label index="search">Suchen</label>
 			
 			<!-- News -->
 			<label index="images">Bilder</label>

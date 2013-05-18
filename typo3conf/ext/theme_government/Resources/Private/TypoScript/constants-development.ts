@@ -47,3 +47,13 @@ plugin.theme_configuration.news.detail.media.image.small.height = 150c
 # **********************************************************
 plugin.theme_configuration.assets.merge = 0
 plugin.theme_configuration.assets.compress = 0
+
+
+# **********************************************************
+# solr config
+# **********************************************************
+plugin.theme_configuration.extensions.indexed_search.form-target = 23
+plugin.tx_solr.solr.host = localhost
+plugin.tx_solr.solr.port = 8080
+plugin.tx_solr.solr.path = /solr/government
+plugin.tx_solr.enableDebugMode = 1
