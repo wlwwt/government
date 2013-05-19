@@ -59,6 +59,10 @@ plugin.tx_solr.search {
 			tx_news_domain_model_news.lang.de = Nachrichten
 		}
     }
+	results {
+		resultsHighlighting = 1
+	}
+	spellchecking = 1
 }
 
 plugin.tx_solr {
